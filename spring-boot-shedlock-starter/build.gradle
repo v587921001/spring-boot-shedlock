@@ -1,0 +1,27 @@
+
+group = 'com.huke'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter:3.0.2'
+    api project(":spring-boot-shedlock-autoconfiguration")
+}
+
+test {
+    useJUnitPlatform()
+}
+
+publishing {
+    publications {
+        mavenJava(MavenPublication) {
+            groupId = "com.example"
+            artifactId = "spring-boot-shedlock-starter"
+            version = "1.0"
+            from components.java
+        }
+    }
+}

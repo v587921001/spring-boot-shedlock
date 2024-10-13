@@ -1,0 +1,4 @@
+rootProject.name = 'spring-boot-shedlock'
+include 'spring-boot-shedlock-autoconfiguration'
+include 'spring-boot-shedlock-starter'
+
